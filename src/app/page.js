@@ -1,94 +1,57 @@
 import Image from "next/image";
+import Link from 'next/link';
 import styles from "./page.module.css";
+import { Inter } from "next/font/google";
+import { FaInstagram, FaCalendar, FaLocationArrow } from "react-icons/fa";
+
+const inter = Inter({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
+  const messages = [
+    "* Ante la duda, no dude.",
+    "* Por las dudas no consulte a su médico.",
+    "* La vida es rara, disfrútala.",
+    "* Siempre hay algo raro por descubrir.",
+    "* No te preocupes, sé raro.",
+    "* No por mucho madrugar se amanece menos raro.",
+    "* Al que quiera celeste, que se ponga raro.",
+    "* No hay raro que por bien no venga."
+  ];
+
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={`${styles.main} ${inter.className}`}>
+      <h1 className={styles.title}>
+        ¿No le parece que está todo un poco RARO?
+      </h1>
+      <h3>Serénese.</h3>
+      <h3>Tómese la pastillita*</h3>
+      <h3>
+        y venga a ver a <i>RARO.</i>
+      </h3>
+      <div className={styles.data}>
+        <div className={styles.date}>
+          <FaCalendar />
+          <h4>
+            21 de septiembre a las 21 h. en <a className={styles.hover} href="https://www.instagram.com/dynartespaciodearte/">Espacio Dynart</a>
+          </h4>
+        </div>
+        <div className={styles.place}>
+        <FaLocationArrow />
+        <a className={styles.hover} href="https://maps.app.goo.gl/CXPGPvjjiVUBDNgRA"><p>Vuelta de obligado 3587, Buenos Aires, Argentina</p></a>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <Link href="/reservas">
+      <button className={styles.button}>Reserve aquí su localidad</button>
+      </Link>
+      <h6>{randomMessage}</h6>
+      <div className={styles.social}>
+        <FaInstagram />
+        <a href="https://www.instagram.com/raro_duo/">@raro_duo</a>
       </div>
     </main>
   );
