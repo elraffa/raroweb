@@ -94,6 +94,7 @@ const ReservationForm = () => {
   return (
     <>
     <h5 className={styles.remainingPlaces}>Lugares disponibles: {remainingPlaces}</h5>
+    {message && <p className={styles.message}>{message}</p>}
     <form className={styles.form} onSubmit={handleSubmit}>
 
       <div className={styles.formGroup}>
@@ -135,7 +136,6 @@ const ReservationForm = () => {
         />
       </div>
       <button type="submit" className={styles.button} disabled={remainingPlaces <= 0}>Reservar</button>
-      {message && <p className={styles.message}>{message}</p>}
     </form>
     </>
   );

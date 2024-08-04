@@ -53,8 +53,9 @@
 }
 
 .message {
-  color: #ffffff;
+  color: #3cbd58;
   font-size: 1rem;
   margin-top: 1rem;
   font-weight: 700;
+  font-family: "Inter", sans-serif;
 }
