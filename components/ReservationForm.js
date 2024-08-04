@@ -77,7 +77,13 @@ const ReservationForm = () => {
         if (response.ok) {
           console.log('Confirmation email sent successfully');
         } else {
-          console.error('Error sending confirmation email');
+          console.error('Error sending confirmation email', {
+            status: response.status,
+            statusText: response.statusText,
+            url: response.url,
+            headers: response.headers,
+            body: await response.text() // Assuming response is a Fetch API Response object
+          });
         }
       } catch (emailError) {
         console.error('Error sending confirmation email:', emailError);
