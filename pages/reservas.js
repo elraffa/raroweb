@@ -6,6 +6,7 @@ export default function Reservas() {
   return (
     <main className={`${styles.main} container`}>
       <h1 className={`${styles.title}`}>Reservas</h1>
+      <p className={styles.text}>El show será a la gorra con reserva. Ingresá tus datos abajo para reservar.</p>
       <ReservationForm />
     </main>
   );
