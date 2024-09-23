@@ -25,6 +25,7 @@ export default function Home() {
 
   return (
     <main className={`${styles.main} ${inter.className}`}>
+      <Image className={styles.profilePic} src="/raro-profile-web.jpg" alt="Raro Duo" width={400} height={400} />
       <h1 className={styles.title}>
         ¿No le parece que está todo un poco RARO?
       </h1>
