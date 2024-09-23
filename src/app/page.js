@@ -28,11 +28,6 @@ export default function Home() {
       <h1 className={styles.title}>
         ¿No le parece que está todo un poco RARO?
       </h1>
-      <h3>Serénese.</h3>
-      <h3>Tómese la pastillita*</h3>
-      <h3>
-        y venga a ver a <i>RARO.</i>
-      </h3>
       <div className={styles.cafecito}>
         <a href="https://cafecito.app/raro_duo" rel="noopener" target="_blank">
           <img
@@ -42,32 +37,6 @@ export default function Home() {
           />
         </a>
       </div>
-      <div className={styles.data}>
-        <div className={styles.date}>
-          <FaCalendar />
-          <h4>
-            21 de septiembre a las 21 h. en{" "}
-            <a
-              className={styles.hover}
-              href="https://www.instagram.com/dynartespaciodearte/"
-            >
-              Espacio Dynart
-            </a>
-          </h4>
-        </div>
-        <div className={styles.place}>
-          <FaLocationArrow />
-          <a
-            className={styles.hover}
-            href="https://maps.app.goo.gl/CXPGPvjjiVUBDNgRA"
-          >
-            <p>Vuelta de obligado 3587, Buenos Aires, Argentina</p>
-          </a>
-        </div>
-      </div>
-      <Link href="/reservas">
-        <button className={styles.button}>Reserve aquí su localidad</button>
-      </Link>
       <h6>{randomMessage}</h6>
       <div className={styles.social}>
         <FaInstagram />
