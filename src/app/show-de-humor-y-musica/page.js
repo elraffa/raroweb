@@ -27,6 +27,10 @@ export default function Show() {
           <p>
             ¡Una experiencia educativa y entretenida que no te podés perder!
           </p>
+          <p className={styles.promo}>
+            <strong>Super Promo Exclusiva WEB:</strong> Agrega el código{" "}
+            <strong>RANDOM2025</strong> cuando compres tus entradas para un <strong>2x1</strong>!
+          </p>
           <button className={styles.button}>
             <a
               href="https://www.entradaweb.com.ar/evento/79fc2345/step/1?fbclid=PAZXh0bgNhZW0CMTEAAaZY-afrHY-wc6h2DkA_25A0PmJB6ZRgyZ9C-LO5zOYXRIZPyt_HMKleCKM_aem_pfU2h3g6NqSuY9f0tVjMeg"
@@ -36,7 +40,7 @@ export default function Show() {
               Comprar entradas
             </a>
           </button>
-          <div class={styles.info}>
+          <div className={styles.info}>
             <p>El show es apto para todo público.</p>
             <p>
               <strong>Duración:</strong> 60 minutos
@@ -159,14 +163,14 @@ export default function Show() {
       <div className={styles.spacer}></div>
       <h2 className={styles.subtitle}>¡No te lo pierdas!</h2>
       <button className={styles.button}>
-            <a
-              href="https://www.entradaweb.com.ar/evento/79fc2345/step/1?fbclid=PAZXh0bgNhZW0CMTEAAaZY-afrHY-wc6h2DkA_25A0PmJB6ZRgyZ9C-LO5zOYXRIZPyt_HMKleCKM_aem_pfU2h3g6NqSuY9f0tVjMeg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Comprar entradas
-            </a>
-          </button>
+        <a
+          href="https://www.entradaweb.com.ar/evento/79fc2345/step/1?fbclid=PAZXh0bgNhZW0CMTEAAaZY-afrHY-wc6h2DkA_25A0PmJB6ZRgyZ9C-LO5zOYXRIZPyt_HMKleCKM_aem_pfU2h3g6NqSuY9f0tVjMeg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Comprar entradas
+        </a>
+      </button>
     </div>
   );
 }
