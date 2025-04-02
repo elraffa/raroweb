@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { Inter } from "next/font/google";
 import { FaInstagram, FaCalendar, FaLocationArrow } from "react-icons/fa";
+import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({
   weight: ["400", "700", "900"],
@@ -25,7 +27,32 @@ export default function Home() {
 
   return (
     <>
-      <Image className={styles.profilePic} src="/raro-profile-web.jpg" alt="Raro Duo" width={400} height={400} />
+      <Head>
+        <title>Raro Duo - Show de Humor y Música</title>
+        <meta
+          name="description"
+          content="Raro Duo combina humor y música en un espectáculo único. ¡No te lo pierdas!"
+        />
+      </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16582830774"
+      ></Script>
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16582830774');
+        `}
+      </Script>
+      <Image
+        className={styles.profilePic}
+        src="/raro-profile-web.jpg"
+        alt="Raro Duo"
+        width={400}
+        height={400}
+      />
       <h1 className={styles.title}>
         ¿No le parece que está todo un poco RARO?
       </h1>
