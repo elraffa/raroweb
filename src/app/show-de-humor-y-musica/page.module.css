@@ -147,6 +147,17 @@
   height: 2rem;
 }
 
+.promo {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .leftRight {
     flex-direction: column;
