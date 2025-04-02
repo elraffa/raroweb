@@ -24,11 +24,14 @@ export default function Home() {
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
   return (
-    <main className={`${styles.main} ${inter.className}`}>
+    <>
       <Image className={styles.profilePic} src="/raro-profile-web.jpg" alt="Raro Duo" width={400} height={400} />
       <h1 className={styles.title}>
         ¿No le parece que está todo un poco RARO?
       </h1>
+      <h2 className={styles.subtitle}>
+        <Link href="/show-de-humor-y-musica">Show de Humor y música</Link>
+      </h2>
       <div className={styles.cafecito}>
         <a href="https://cafecito.app/raro_duo" rel="noopener" target="_blank">
           <img
@@ -43,6 +46,6 @@ export default function Home() {
         <FaInstagram />
         <a href="https://www.instagram.com/raro_duo/">@raro_duo</a>
       </div>
-    </main>
+    </>
   );
 }
