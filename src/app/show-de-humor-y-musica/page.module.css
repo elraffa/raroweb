@@ -155,6 +155,15 @@
     max-width: 100%;
   }
 
+  .textContainer {
+    padding: 0 3.5rem;
+  }
+
+  .bioText {
+    padding: 0 2rem;
+    text-align: center;
+  }
+
   .bioColumns {
     flex-direction: column;
   }
