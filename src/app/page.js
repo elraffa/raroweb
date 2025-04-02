@@ -27,25 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Raro Duo - Show de Humor y Música</title>
-        <meta
-          name="description"
-          content="Raro Duo combina humor y música en un espectáculo único. ¡No te lo pierdas!"
-        />
-      </Head>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16582830774"
-      ></Script>
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16582830774');
-        `}
-      </Script>
       <Image
         className={styles.profilePic}
         src="/raro-profile-web.jpg"
